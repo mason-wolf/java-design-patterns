@@ -1,4 +1,4 @@
-public class FighterAircraft implements Aircraft {
+public class FighterAircraft implements Aircraft, CombatCapable {
 
     private int fuel;
     @Override
@@ -10,5 +10,15 @@ public class FighterAircraft implements Aircraft {
     @Override
     public void getAircraftDetails() {
         System.out.println("Prepping fighter aircraft..");
+    }
+
+    @Override
+    public void weaponize(Weapon weapon) {
+
+    }
+
+    @Override
+    public void acquireTarget(TargetPrototype target) {
+        System.out.println("Fighter aircraft acquiring target..");
     }
 }

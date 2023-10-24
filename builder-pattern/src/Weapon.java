@@ -13,15 +13,24 @@ public class Weapon {
     private String type = "UNSPECIFIED";
     private WeaponStatus status = WeaponStatus.OFFLINE;
 
+    public void setRange(int range) {
+        this.range = range;
+    }
+    public int getRange() {
+
+        return this.range;
+    }
+
     public void getStatus() {
         System.out.println("WEAPON STATUS: " + this.status.toString());
         System.out.println("TYPE: " + this.type);
         System.out.println("ARMED: " + this.armed);
         System.out.println("OPERATIONAL: " + this.operational);
+        System.out.println("RANGE: " + this.range);
     }
 
     public static class WeaponBuilder {
-        private Weapon weapon;
+        private final Weapon weapon;
 
         public WeaponBuilder() {
             weapon = new Weapon();
