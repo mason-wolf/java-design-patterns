@@ -16,9 +16,4 @@ public class FighterAircraft implements Aircraft, CombatCapable {
     public void weaponize(Weapon weapon) {
 
     }
-
-    @Override
-    public void acquireTarget(TargetPrototype target) {
-        System.out.println("Fighter aircraft acquiring target..");
-    }
 }
